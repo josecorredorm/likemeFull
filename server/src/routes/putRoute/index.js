@@ -1,11 +1,11 @@
 const router = require('express').Router();
 //importar controladores
-const {getController} = require('../../controller/index');
-const {getAllData}= getController;
+const {putController} = require('../../controller/index');
+const {modData}= putController;
 
 //crear rutas 
 
-router.put('/', )
+router.put('/:id', modData);
 
 
 module.exports=router;
