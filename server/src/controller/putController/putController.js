@@ -8,7 +8,7 @@ const modData= async(req,res) =>{
         if(id){
                 const idDB = (await db.query(getIDQuery)).rows;
                 const index = idDB.find(element => element.id == id);
-                if(index && Number.isInteger(id)){
+                if(index){
                         NewLike = index.likes + 1;
                         console.log(NewLike);
                         const values =[NewLike, id];
